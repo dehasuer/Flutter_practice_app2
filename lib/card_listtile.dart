@@ -17,6 +17,7 @@ class CardveListtileKullanimi extends StatelessWidget {
             tekListeElemani(),
             tekListeElemani(),
             tekListeElemani(),
+            tekListeElemani(),
           ],
         ),
       ),
