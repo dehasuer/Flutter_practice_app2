@@ -10,16 +10,47 @@ class CardveListtileKullanimi extends StatelessWidget {
         title: Text("Cardlisttile Kullanımı"),
       ),
       body: Center(
-        child: Column(
+        child: ListView(
           children: [
-            tekListeElemani(),
-            tekListeElemani(),
-            tekListeElemani(),
-            tekListeElemani(),
-            tekListeElemani(),
-            tekListeElemani(),
+            Column(
+              children: [
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+                tekListeElemani(),
+              ],
+            ),
+            Text("Hello"),
+            ElevatedButton(
+                onPressed: () {
+                  debugPrint("Tıklandı");
+                },
+                child: Text("Button"))
           ],
         ),
+      ),
+    );
+  }
+
+  SingleChildScrollView singleChildKullanimi() {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+          tekListeElemani(),
+        ],
       ),
     );
   }
