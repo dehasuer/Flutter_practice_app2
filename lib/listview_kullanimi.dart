@@ -5,7 +5,7 @@ class ListViewKullanimi extends StatelessWidget {
   ListViewKullanimi({super.key});
 
   List<Ogrenci> tumOgrenciler = List.generate(
-    500,
+    100,
     (index) => Ogrenci(
         index + 1, "Ogrenci ${index + 1}", "Ogrenci Soyadı ${index + 1}"),
   );
