@@ -15,7 +15,29 @@ class ListViewKullanimi extends StatelessWidget {
       appBar: AppBar(
         title: Text("ListView Kullanımı"),
       ),
-      body: klasikListView(),
+      body: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          var secilenOgrenci = tumOgrenciler[index];
+          return Card(
+            color: index % 2 == 0
+                ? Colors.orange.shade100
+                : Colors.orange.shade300,
+            child: ListTile(
+              onTap: () {
+                print("Eleman indexi ; $index");
+              },
+              title: Text(secilenOgrenci.isim),
+              subtitle: Text(secilenOgrenci.soyisim),
+              leading: CircleAvatar(
+                child: Text(
+                  secilenOgrenci.id.toString(),
+                ),
+              ),
+            ),
+          );
+        },
+        itemCount: tumOgrenciler.length,
+      ),
     );
   }
 
