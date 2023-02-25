@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 class ListViewKullanimi extends StatelessWidget {
   ListViewKullanimi({super.key});
@@ -24,7 +25,20 @@ class ListViewKullanimi extends StatelessWidget {
                 : Colors.orange.shade300,
             child: ListTile(
               onTap: () {
+                if (index % 2 == 0) {
+                  EasyLoading.instance.backgroundColor = Colors.red;
+                } else {
+                  EasyLoading.instance.backgroundColor = Colors.blue;
+                }
                 print("Eleman indexi ; $index");
+                EasyLoading.showToast(
+                  "Eleman Tıklandı",
+                  duration: Duration(
+                    seconds: 3,
+                  ),
+                  dismissOnTap: true,
+                  toastPosition: EasyLoadingToastPosition.bottom,
+                );
               },
               title: Text(secilenOgrenci.isim),
               subtitle: Text(secilenOgrenci.soyisim),
