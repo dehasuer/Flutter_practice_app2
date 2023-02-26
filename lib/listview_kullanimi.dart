@@ -30,6 +30,7 @@ class ListViewKullanimi extends StatelessWidget {
                 } else {
                   EasyLoading.instance.backgroundColor = Colors.blue;
                 }
+
                 print("Eleman indexi ; $index");
                 EasyLoading.showToast(
                   "Eleman Tıklandı",
@@ -39,6 +40,9 @@ class ListViewKullanimi extends StatelessWidget {
                   dismissOnTap: true,
                   toastPosition: EasyLoadingToastPosition.bottom,
                 );
+              },
+              onLongPress: () {
+                _alertDialogIslemleri(context, secilenOgrenci);
               },
               title: Text(secilenOgrenci.isim),
               subtitle: Text(secilenOgrenci.soyisim),
@@ -72,6 +76,40 @@ class ListViewKullanimi extends StatelessWidget {
           .toList(),
     );
   }
+
+  void _alertDialogIslemleri(BuildContext myContext, Ogrenci oAnkiOgrenci) {
+    showDialog(
+        context: myContext,
+        builder: (context) {
+          return AlertDialog(
+            title: Text(oAnkiOgrenci.toString()),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: [
+                  Text("Test1" * 100),
+                  Text("Test2" * 100),
+                  Text("Test3" * 100),
+                  Text("Test4" * 100)
+                ],
+              ),
+            ),
+            actions: [
+              ButtonBar(
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Kapat"),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Tamam"),
+                  )
+                ],
+              )
+            ],
+          );
+        });
+  }
 }
 
 class Ogrenci {
@@ -80,4 +118,10 @@ class Ogrenci {
   final String soyisim;
 
   Ogrenci(this.id, this.isim, this.soyisim);
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return "Isim : $isim Soyisim : $soyisim Id: $id";
+  }
 }
