@@ -81,6 +81,30 @@ class GridViewOrnek extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
+          Container(
+            alignment: Alignment.center,
+            color: Colors.teal.shade300,
+            child: Text(
+              "Hello Flutter",
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            color: Colors.teal.shade300,
+            child: Text(
+              "Hello Flutter",
+              textAlign: TextAlign.center,
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            color: Colors.teal.shade300,
+            child: Text(
+              "Hello Flutter",
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       ),
     );
