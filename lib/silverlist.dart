@@ -1,13 +1,11 @@
-import 'package:flutter/material.dart';
-
-class SilverList extends StatefulWidget {
-  const SilverList({super.key});
+class SilverListKullanimi extends StatefulWidget {
+  const SilverListKullanimi({super.key});
 
   @override
-  State<SilverList> createState() => _SilverListState();
+  State<SilverListKullanimi> createState() => _SilverListKullanimiState();
 }
 
-class _SilverListState extends State<SilverList> {
+class _SilverListKullanimiState extends State<SilverListKullanimi> {
   @override
   Widget build(BuildContext context) {
     return Container();
